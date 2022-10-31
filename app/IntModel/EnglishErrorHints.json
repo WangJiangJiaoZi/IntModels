@@ -1,0 +1,58 @@
+
+
+{
+	"controller": {
+		"geo": {},
+		"feature": {
+			"impExportFeature": {
+				"setupMovementFrJSON": "Failed to set up movements from JSON. Geometry must be imported before movements setup.",
+				"importFeatureFrJSON": "Failed to import feature from JSON. The JSON data should be an array of objects each of which should have properties of 'level', 'type', and 'values'."
+			},
+			"modelFeature": {
+				"modelIntFeature": "Failed to model intModel features. Please model geometry first."
+			},
+			"drawFeature": {
+				"checkIfGeoDrawn": "Failed to draw intersection features. Please draw intersection geometry first.",
+				"drawIntersectionFeature": "Failed to draw int features. The 'type' provided is invalid.",
+				"drawMovementFeature": "Failed to draw movement features. The 'type' provided is invalid."
+			},
+			"updateFeature": {
+				"int": {
+					
+				},
+				"mov": {
+					
+				}
+			}
+		}
+	},
+
+	"modeler": {
+		"int": {
+			"handleInjectError": "Invalid ${info} to inject into ${modelOwner}. ${reason}",
+			"handleGeneralError": "Error in ${modelOwner}: ${info}",
+			"setupMovementInfo": "movement settings",
+			"setupMovementReason": "It should be a two dimensions array of which both the width and height should be the same with the intersection roads' count",
+			"injectFeatureInfo1": "feature data",
+			"injectFeatureReason1": "It should be an object with a property of an array of the same length with the intersection roads' count",
+			"injectIntFeatureInfo": "intersection level feature data",
+			"injectIntFeatureReason": "It should be one of the following types: 'LOS', 'delay', 'controlType'.",
+			"verifyIntControlType": "Invalid controlType, which should be one of 'signal', 'stop', 'roundabout', 'none'.",
+			"verifyIntLOS": "Invalid LOS, which should be a single letter among letters from 'A' to 'F'."
+		},
+		"approach": {
+		},
+		"laneGG": {
+			"handleInjectError": "Invalid ${info} to inject into ${modelOwner}. ${reason}",
+			"injectFeatureInfo1": "feature data of the type of 'movement'",
+			"injectFeatureReason1": "The feature values should be an array of the same length with the intersection roads' count",
+			"injectFeatureInfo2": "feature data of the type of 'movement'",
+			"injectFeatureReason2": "The feature values should be an array of elements which match the movements setting. Please check the feature data to inject or the movement settings"
+		},
+		"movement": {
+			"handleInjectError": "Invalid ${info} to inject into ${modelOwner}. ${reason}",
+			"injectFeatureInfo": "feature data of the type of 'movement'",
+			"injectFeatureReason": "The feature should be one of the following types: 'volume', 'delay', 'stop', 'queue', or 'overflow'"
+		}
+	}
+}

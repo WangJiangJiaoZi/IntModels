@@ -1,0 +1,5 @@
+{
+
+	"modelIntGeo": "Invalid canvasSize. It should be a postivie number.",
+	"drawIntGeo": "Invalid canvasSize. Please run intModel first."
+}

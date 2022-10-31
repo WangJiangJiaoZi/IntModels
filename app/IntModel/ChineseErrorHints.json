@@ -1,0 +1,60 @@
+
+
+
+{
+	"controller": {
+		"geo": {},
+		"feature": {
+			"impExportFeature": {
+				"setupMovementFrJSON": "无法依据提供的JSON数据建立转向(movements)。 转向建立前必须先载入几何信息。",
+				"importFeatureFrJSON": "无法载入路口特征信息。特征信息的JSON应该是一个数组，且该数组的每一个元素都应该是一个有level, type和values的object。"
+			},
+			"modelFeature": {
+				"modelIntFeature": "无法计算属性情况。 请先计算几何。"
+			},
+			"drawFeature": {
+				"checkIfGeoDrawn": "无法绘制路口的属性信息。 请先绘制路口几何。",
+				"drawIntersectionFeature": "无法绘制路口属性。因为要绘制的属性类型不存在。",
+				"drawMovementFeature": "无法绘制转向(movement)属性。 因为要绘制的属性类型不存在。"	
+			},
+			"updateFeature": {
+				"int": {
+					
+				},
+				"mov": {
+					
+				}			
+			}
+		}
+	},
+
+	"modeler": {
+		"int": {
+			"handleInjectError": "无法向${modelOwner}中载入${info}数据。${reason}",
+			"handleGeneralError": "${modelOwner}报错： ${info}",
+			"setupMovementInfo": "转向(movement)设置",
+			"setupMovementReason": "转向信息应该是一个二维数组。该数组的宽和高都应该和路口的道路数量一致。",
+			"injectFeatureInfo1": "属性数据",
+			"injectFeatureReason1": "其应该是一个object，该object应该有一个有和路口道路数量一致的元素数量的数组",
+			"injectIntFeatureInfo": "路口层级的属性信息",
+			"injectIntFeatureReason": "其应该是以下类型之一: 'LOS', 'delay', 'controlType'",
+			"verifyIntControlType": "无效的控制类型，其应该是以下类型中的一种：'signal', 'stop', 'roundabout', 'none'。",
+			"verifyIntLOS": "无效的LOS, 其应该是从'A'到'F'大写字母中的一个。"
+		},
+		"approach": {
+		},
+		"laneGG": {
+			"handleInjectError": "无法向${modelOwner}中载入${info}数据。${reason}",
+			"injectFeatureInfo1": "转向(movement)层级的属性数据",
+			"injectFeatureReason1": "其应该是一个有和路口道路数量一致的元素数量的数组",
+			"injectFeatureInfo2": "转向(movement)层级的属性数据",
+			"injectFeatureReason2": "其应该是一个匹配转向(movements)已有设置的数组。请检查待导入的属性数据或者转向设置"
+		},
+		"movement": {
+			"handleInjectError": "无法向${modelOwner}中载入${info}数据。${reason}",
+			"injectFeatureInfo": "转向(movement)层级的属性数据",
+			"injectFeatureReason": "其应该是以下类型之一: 'volume', 'delay', 'stop', 'queue', 或者'overflow'"
+
+		}
+	}
+}
